@@ -85,11 +85,7 @@ let galleryMarkup = images
             .join("");
 gallery.innerHTML = galleryMarkup;
 
-// import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-
-// captions	true
-// captionPosition	'bottom'
-// captionDelay	0
+var lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captions: true, captionPosition: 'bottom', captionDelay: 250,});

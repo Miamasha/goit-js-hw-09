@@ -33,6 +33,10 @@ if (localStorage.getItem("feedback-form-state")){
 form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
     event.preventDefault();
+    if (emailInput.value === "" || messageInput.value === "") {
+        alert("All Form fields must be filled!")
+        return false;
+    }
     localStorage.removeItem("feedback-form-state");
     console.log(getCurrentState());
     event.target.reset();
