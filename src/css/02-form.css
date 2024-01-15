@@ -11,12 +11,13 @@ body {
     padding: 24px;
     width: 408px;
 }
+
+/* Формат і розташування підписів полів */
 label {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
-    margin-bottom: 8px;
-    
+    margin-bottom: 8px;    
     color: #2E2F42;    
     font-size: 16px;
     font-weight: 400;
@@ -29,15 +30,21 @@ label textarea {
     width: 360px;
     height: 40px;
     border-radius: 4px;
+    outline: none;
     border: 1px solid #808080;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+    color: #000;
 }
 
 label input:hover,
 label textarea:hover,
 label input:focus,
-label textarea:focus,
-label input:active,
-label textarea:active {
+label textarea:focus {
     border: 1px solid #2E2F42;
 }
 
@@ -53,13 +60,15 @@ button {
     border-radius: 8px;
     border: none;
     background-color: #4E75FF;
-    Padding: 8px, 16px, 8px, 16px;
-    
+    Padding: 8px, 16px, 8px, 16px;    
     color: #FFF;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.64px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 button:hover,
@@ -67,9 +76,3 @@ button:focus {
 	background-color: #4466df;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-    /* font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 1.17;
-	letter-spacing: 0.01em;
-	color: #757575; */
