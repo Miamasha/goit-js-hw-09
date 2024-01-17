@@ -2,13 +2,12 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";import{S as p}from"./assets/
                 <li class="gallery-item">
                     <a 
                     class="gallery-link" 
-                    href="${o.original}"      
+                    href="${o.original}"
                     >
                         <img
-                        class="gallery-image"
-                        src="${o.preview}"
-                        
-                        alt="${o.description}"
+                            class="gallery-image"
+                            src="${o.preview}"                        
+                            alt="${o.description}"
                         width="360"
                         />
                     </a>
