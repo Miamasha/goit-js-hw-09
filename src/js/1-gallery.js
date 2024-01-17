@@ -64,19 +64,23 @@ const images = [
         },
     ];
 
+
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
+
 const gallery = document.querySelector(".gallery");
 let galleryMarkup = images
             .map((image) => `
                 <li class="gallery-item">
                     <a 
                     class="gallery-link" 
-                    href="${image.original}"      
+                    href="${image.original}"
                     >
                         <img
-                        class="gallery-image"
-                        src="${image.preview}"
-                        
-                        alt="${image.description}"
+                            class="gallery-image"
+                            src="${image.preview}"                        
+                            alt="${image.description}"
                         width="360"
                         />
                     </a>
@@ -85,7 +89,22 @@ let galleryMarkup = images
             .join("");
 gallery.innerHTML = galleryMarkup;
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
 
-var lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captions: true, captionPosition: 'bottom', captionDelay: 250,});
+
+var lightbox = new SimpleLightbox('.gallery a', {
+                                                    captionsData: 'alt',
+                                                    captions: true,
+                                                    captionPosition: 'bottom',
+                                                    captionDelay: 250,
+                                                });
+
+// Додай бібліотеку SimpleLightbox як залежність до проєкту, використовуючи npm (іnstall)
+// Внутрішньо підключи бібліотеку в проєкті між файлами, а також її CSS-файл (import)
+// Ініціалізуй бібліотеку після додання галереї ul.gallery (initialization)
+                                                
+// Розташування імпортів: Імпорти повинні бути у верхній частині файлу JS (на верхньому рівні модуля).
+// Це конвенція в модулях JavaScript, зрозумілість і усунення можливих неполадок. За правильним
+// синтаксисом JS імпорти також не можуть бути всередині функцій або блоків.
+
+// Неспівпадіння кавичок у атрибутах: має бути послідовність використання кавичок у атрибутах.
+// Краще використовувати подвійні лапки для атрибутів HTML.
